@@ -276,6 +276,9 @@ li {
     .header {
         height: 100vh;
     }
+    .hero p {
+        font-size: 2rem;
+    }
 }
 
 
