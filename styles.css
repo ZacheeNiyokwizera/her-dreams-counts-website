@@ -592,11 +592,12 @@ ul.p {
     outline: none;
 }
 
-.form a {
+.form button {
     display: inline-block;
     padding: 0.7rem 2.5rem;
     background-color: #fe1493;
     color: #fff;
+    border-radius: 10px;
 }
 
 @media only screen and (max-width: 996px) {

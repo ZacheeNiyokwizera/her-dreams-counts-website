@@ -52,3 +52,73 @@ links.map(link => {
 });
 
 AOS.init();
+
+
+// sending emails
+
+    
+(function () {
+  // emailjs.init("USERID");
+  emailjs.init("ZMuZ6kfJ7Na8nsEaS");
+})();
+
+
+
+function validate() {
+  let loader = document.querySelector(".loader");
+  let name = document.querySelector(".name");
+  let mail = document.querySelector(".email");
+  let msg = document.querySelector(".message");
+
+
+function sendmail(name, mail, msg) {
+  emailjs.send("service_x9fw0wr", "template_ertnsfs", {
+ 
+    from_name: name,
+    email: mail,
+    message: msg,
+   
+  });
+}
+// email: email,
+function emptyerror() {
+  Swal.fire({
+    icon: "error",
+    title: "Oops...",
+    text: "Fields cannot be empty!",
+  });
+}
+
+function error() {
+  Swal.fire({
+    icon: "error",
+    title: "Oops...",
+    text: "Something went wrong!",
+  });
+}
+
+function success() {
+  Swal.fire({
+    icon: "success",
+    title: "Success...",
+    text: "Successfully sent message",
+  });
+}
+let btn = document.querySelector(".form");
+
+  btn.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (name.value == "" || mail.value == "" || msg.value == "") {
+      emptyerror();
+    } else {
+      loader.style.display = "flex";
+      sendmail(name.value, mail.value, msg.value);
+      success();
+      loader.style.display = "none";
+    }
+  });
+}
+validate();
+
+
+

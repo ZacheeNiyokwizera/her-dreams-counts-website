@@ -11,6 +11,12 @@
     <!-- Custom StyleSheet -->
     <link rel="stylesheet" href="styles.css" />
     <title>Her Dreams Count Website</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("ZMuZ6kfJ7Na8nsEaS");
+        })();
+    </script>
 </head>
 
 <body>
@@ -62,13 +68,13 @@
 
         </div>
         <div class="contact-center container">
-            <form class="form" data-aos="fade-down-right" data-aos-duration="2000">
+            <form class="form" data-aos="fade-down-right" data-aos-duration="2000" autocomplete="on">
                 <h2>Send Message</h2>
                 <input type="text" placeholder="Name" class="name" />
                 <input type="email" placeholder="Email" class="email" />
                 <textarea class="message" cols="30" rows="10" placeholder="Message"></textarea>
 
-                <a href="#">SEND</a>
+                <button class="btn">SEND</button>
             </form>
             <div class="img-cover" data-aos="fade-up-left" data-aos-duration="2000">
                 <img src="./images/contact.jpg" alt="" />
@@ -110,9 +116,15 @@
         </div>
     </footer>
     <!-- End Footer -->
+
+    <!-- loader -->
+    <div class="loader">
+        <img src="https://media.giphy.com/media/MEiZ5h8lOkM7rwideE/giphy.gif" alt="" />
+    </div>
     <!-- Custom Script -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="./index.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
