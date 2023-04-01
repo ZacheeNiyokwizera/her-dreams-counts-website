@@ -147,14 +147,17 @@ img {
 }
 
 .team__container {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    gap: 2rem; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .team__member {
     background: var(--color-bg2);
-    /* padding: 1rem; */
+    width: 500px;
     border: 1px solid transparent;
     transition: var(--transition);
     position: relative;
