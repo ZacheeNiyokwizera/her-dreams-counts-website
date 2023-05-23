@@ -172,79 +172,6 @@ header {
 }
 
 
-/* =================== CATEGORIES ===================== */
-
-.categories {
-    background: var(--color-bg1);
-    height: 44rem;
-    margin-bottom: 5px;
-}
-
-.categories h1 {
-    line-height: 1;
-    margin-bottom: 3rem;
-}
-
-.categories__right {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-left: 120px;
-    margin-top: -40px;
-}
-
-.category {
-    width: 320px;
-    background: var(--color-bg2);
-    padding: 2rem;
-    border-radius: 2rem;
-    transition: var(--transition);
-    margin-left: 40px;
-}
-
-.category:hover {
-    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
-    z-index: 1;
-}
-
-.category:nth-child(2) .category__icon {
-    background: var(--color-danger);
-}
-
-.category:nth-child(3) .category__icon {
-    background: var(--color-success);
-}
-
-.category:nth-child(4) .category__icon {
-    background: var(--color-warning);
-}
-
-.category:nth-child(5) .category__icon {
-    background: var(--color-success);
-}
-
-.category__icon {
-    background: var(--color-primary);
-    padding: 0.7rem;
-    border-radius: 0.9rem;
-}
-
-.category h5 {
-    margin: 2rem 0 1rem;
-}
-
-.category p {
-    font-size: 0.85rem;
-}
-
-.categories h1 {
-    text-align: center;
-    margin-top: -80px;
-    font-size: 32px;
-    padding: 20px;
-}
-
-
 /* =================== POPULAR COURSES ===================== */
 
 .courses {
@@ -497,37 +424,12 @@ footer ul li a:hover {
         gap: 0;
         padding-bottom: 3rem;
     }
-    /* ====================== CATEGORIES ===================== */
-    .categories {
-        height: auto;
-    }
-    .categories__container {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-    .categories__left {
-        margin-right: 0;
-    }
-    /* ====================== POPULAR COURSES ===================== */
-    .courses {
-        margin-top: 0;
-    }
-    .courses__container {
-        grid-template-columns: 1fr 1fr;
-    }
-    /* ====================== FAQs ===================== */
-    .faqs__container {
-        grid-template-columns: 1fr;
-    }
-    .faq {
-        padding: 1.5rem;
-    }
+
     /* ====================== FOOTER ===================== */
     .footer__container {
         grid-template-columns: 1fr 1fr;
     }
 }
-
 
 /* ======================== MEDIA QUERIES (PHONES) ======================= */
 
@@ -550,30 +452,6 @@ footer ul li a:hover {
     }
     .header__left p {
         margin-bottom: 1.3rem;
-    }
-    /* ====================== CATEGORIES ===================== */
-    .categories__right {
-        display: flex;
-        flex-direction: row;
-        margin-left: -5px;
-    }
-    .category {
-        padding: 1rem;
-        border-radius: 1rem;
-        margin-top: 20px;
-        width: 379px;
-    }
-    .category__icon {
-        margin-top: 4px;
-        display: inline-block;
-    }
-    /* ====================== POPULAR COURSES ===================== */
-    .courses__container {
-        grid-template-columns: 1fr;
-    }
-    /* ====================== TESTIMONIALS ===================== */
-    .testimonial__body {
-        padding: 1.2rem;
     }
     /* ====================== FOOTER ===================== */
     .footer__container {

@@ -5,52 +5,170 @@
 }
 
 .about__achievements-container {
-    display: grid;
-    grid-template-columns: 40% 60%;
-    gap: 5rem;
+   width: 100%;
+   padding: 4%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   flex-wrap: wrap;
+
+}
+
+.about__achievements-left{
+    width: 45%;
+}
+
+.about__achievements-right{
+    width: 45%;
 }
 
 .about__achievements-right>p {
     margin: 1.6rem 0 2.5rem;
 }
 
-.achievements__cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}
+@media screen and (max-width: 1024px) {
+    .about__achievements-container {
+        /* margin-left: 20px; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: space-between;
+       
+     }
+ 
+     .about__achievements-left{
+         width: 100%;
+     }
+     
+     .about__achievements-right{
+         width: 100%;
+     }
+     .bottom-div{
+        margin-top: -210px;
+       }
+  }
+  
+  /* =================== MEDIA QUERIES (PHONES) ================ */
+  @media screen and (max-width: 600px) {
+    .about__achievements-container {
+       /* margin-left: 20px; */
+       flex-direction: column;
+       justify-content: center;
+       align-items: space-between;
+       margin-top: 0px;
+    }
 
-.achievement__card {
+    .about__achievements-left{
+        width: 100%;
+    }
+    
+    .about__achievements-right{
+        margin-top: 20px;
+        width: 100%;
+    }
+   .bottom-div{
+    margin-top: -190px;
+   }
+  }
+  
+
+/* =================== CATEGORIES ===================== */
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+    flex-wrap: wrap;
     background: var(--color-bg1);
-    padding: 1.6rem;
-    border-radius: 1rem;
-    text-align: center;
-    transition: var(--transition);
+    /* height: 45rem; */
+    margin-bottom: 5px;
 }
 
-.achievement__card:hover {
+.categories__right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-between;
+    
+}
+
+.category {
+    width: 320px;
     background: var(--color-bg2);
+    padding: 2rem;
+    border-radius: 2rem;
+    transition: var(--transition);
+    margin-left: 30px;
+}
+
+.category:hover {
     box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+    z-index: 1;
 }
 
-.achievement__icon {
+.category:nth-child(2) .category__icon {
     background: var(--color-danger);
-    padding: 0.6rem;
-    border-radius: 1rem;
-    display: inline-block;
-    margin-bottom: 2rem;
-    font-size: 2rem;
 }
 
-.achievement__card:nth-child(2) .achievement__icon {
+.category:nth-child(3) .category__icon {
     background: var(--color-success);
 }
 
-.achievement__card:nth-child(3) .achievement__icon {
+.category:nth-child(4) .category__icon {
+    background: var(--color-warning);
+}
+
+.category:nth-child(5) .category__icon {
+    background: var(--color-success);
+}
+
+.category__icon {
     background: var(--color-primary);
+    padding: 0.7rem;
+    border-radius: 0.9rem;
 }
 
-.achievement__card p {
-    margin-top: 1rem;
+.category h5 {
+    margin: 2rem 0 1rem;
 }
 
+.category p {
+    font-size: 0.85rem;
+}
+
+.categories h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 45px;
+}
+
+/* ===================== MEDIA QUERIES (TABLETS) ==================== */
+
+@media screen and (max-width: 1024px) {
+    /* ====================== CATEGORIES ===================== */
+    .categories__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .category {
+        margin-top: 20px;
+        width: 320px;
+    }
+}
+
+/* ======================== MEDIA QUERIES (PHONES) ======================= */
+
+@media screen and (max-width: 600px) {
+    /* ====================== CATEGORIES ===================== */
+    .categories__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .category {
+        margin-top: 20px;
+        width: 320px;
+    }
+}
