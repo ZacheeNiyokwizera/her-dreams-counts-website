@@ -169,10 +169,8 @@ img {
         justify-content: center;
         align-items: center;
     }
-    
     .gallery_card {
         width: 90%;
-        
     }
 }
 
@@ -180,7 +178,6 @@ img {
 /* ==================== MEDIA QUERIES (TABLETS) ================= */
 
 @media screen and (max-width: 600px) {
-
     .gallery__container {
         flex-direction: column;
         justify-content: center;
@@ -189,9 +186,7 @@ img {
     
     .gallery_card {
         width: 90%;
-        
     }
-    
 }
 
 
